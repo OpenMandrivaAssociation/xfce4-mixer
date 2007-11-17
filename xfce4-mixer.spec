@@ -1,10 +1,7 @@
-%define oname 		xfce4-mixer
-%define iconname  	%{oname}.png
-
 Summary:	Volume control for the Xfce
-Name:		xfce-mixer
+Name:		xfce4-mixer
 Version:	4.4.1
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	BSD
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
@@ -20,6 +17,7 @@ BuildRequires:	desktop-file-utils
 BuildRequires:	libalsa-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
+Obsoletes:	xfce-mixer
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
@@ -27,7 +25,7 @@ Xfce-mixer is the volume control for Xfce. It includes
 a sound mixer.
 
 %prep
-%setup -qn %{oname}-%{version}
+%setup -q
 %patch0 -p1
 
 %build
@@ -35,6 +33,7 @@ a sound mixer.
 	--with-sound=alsa \
 	--enable-final \
 	--disable-static
+	
 # (tpg) don't use macro because parallel build fails
 # use dirty hacks :)
 %(echo %make|perl -pe 's/-j\d+/-j1/g')
@@ -44,8 +43,8 @@ rm -rf %{buildroot}
 %makeinstall_std
 
 mkdir -p %{buildroot}%{_iconsdir}/hicolor/{32x32,16x16}/apps
-convert settings/%{oname}.png -geometry 32x32 %{buildroot}%{_iconsdir}/hicolor/32x32/apps/%{iconname}
-convert settings/%{oname}.png -geometry 16x16 %{buildroot}%{_iconsdir}/hicolor/16x16/apps/%{iconname}
+convert settings/%{name}.png -geometry 32x32 %{buildroot}%{_iconsdir}/hicolor/32x32/apps/%{name}.png
+convert settings/%{name}.png -geometry 16x16 %{buildroot}%{_iconsdir}/hicolor/16x16/apps/%{name}.png
 
 desktop-file-install \
 --remove-category="X-FACE" \
@@ -53,7 +52,7 @@ desktop-file-install \
 --add-category="Audio" \
 --dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
-%find_lang %{oname}
+%find_lang %{name}
 
 %clean
 rm -rf %{buildroot}
@@ -66,7 +65,7 @@ rm -rf %{buildroot}
 %{clean_menus}
 %clean_icon_cache hicolor
  
-%files -f %{oname}.lang
+%files -f %{name}.lang
 %defattr(-,root,root)
 %doc README ChangeLog NOTES INSTALL COPYING AUTHORS
 %{_bindir}/*
