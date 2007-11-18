@@ -34,9 +34,7 @@ a sound mixer.
 	--enable-final \
 	--disable-static
 
-# (tpg) don't use macro because parallel build fails
-# use dirty hacks :)
-%(echo %make|perl -pe 's/-j\d+/-j1/g')
+%make
 
 %install
 rm -rf %{buildroot}
@@ -70,7 +68,7 @@ rm -rf %{buildroot}
 %doc README ChangeLog NOTES INSTALL COPYING AUTHORS
 %{_bindir}/*
 %{_datadir}/applications/xfce*
-%{_iconsdir}/hicolor/*/apps/%{iconname}
+%{_iconsdir}/hicolor/*/apps/%{name}.png
 %{_datadir}/xfce4/panel-plugins/
 %{_libdir}/xfce4/panel-plugins/
 %{_libdir}/xfce4/mcs-plugins/
