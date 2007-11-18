@@ -33,7 +33,7 @@ a sound mixer.
 	--with-sound=alsa \
 	--enable-final \
 	--disable-static
-	
+
 # (tpg) don't use macro because parallel build fails
 # use dirty hacks :)
 %(echo %make|perl -pe 's/-j\d+/-j1/g')
@@ -64,7 +64,7 @@ rm -rf %{buildroot}
 %postun
 %{clean_menus}
 %clean_icon_cache hicolor
- 
+
 %files -f %{name}.lang
 %defattr(-,root,root)
 %doc README ChangeLog NOTES INSTALL COPYING AUTHORS
