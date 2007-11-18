@@ -34,7 +34,9 @@ a sound mixer.
 	--enable-final \
 	--disable-static
 
-%make
+# (tpg) don't use macro because parallel build fails
+# use dirty hacks :)
+%(echo %make|perl -pe 's/-j\d+/-j1/g')
 
 %install
 rm -rf %{buildroot}
