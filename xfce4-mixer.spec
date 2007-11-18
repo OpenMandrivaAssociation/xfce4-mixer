@@ -1,14 +1,14 @@
 Summary:	Volume control for the Xfce
 Name:		xfce4-mixer
-Version:	4.4.1
-Release:	%mkrel 5
+Version:	4.4.2
+Release:	%mkrel 1
 License:	BSD
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
 Source0:	xfce4-mixer-%{version}.tar.bz2
 Patch0:		01_volume_hotkeys.patch
-Requires:	xfce-panel >= %{version}
-BuildRequires:	xfce-panel-devel >= %{version}
+Requires:	xfce4-panel >= %{version}
+BuildRequires:	xfce4-panel-devel >= %{version}
 BuildRequires:	libgdk_pixbuf2.0-devel
 BuildRequires:	imagemagick
 BuildRequires:	xfce-mcs-manager-devel
@@ -45,10 +45,10 @@ convert settings/%{name}.png -geometry 32x32 %{buildroot}%{_iconsdir}/hicolor/32
 convert settings/%{name}.png -geometry 16x16 %{buildroot}%{_iconsdir}/hicolor/16x16/apps/%{name}.png
 
 desktop-file-install \
---remove-category="X-FACE" \
---add-category="Mixer" \
---add-category="Audio" \
---dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
+	--remove-category="X-FACE" \
+	--add-category="Mixer" \
+	--add-category="Audio" \
+	--dir %{buildroot}%{_datadir}/applications %{buildroot}%{_datadir}/applications/*
 
 %find_lang %{name}
 
