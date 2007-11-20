@@ -67,7 +67,7 @@ rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root)
-%doc README ChangeLog NOTES INSTALL COPYING AUTHORS
+%doc README ChangeLog NOTES AUTHORS NEWS
 %{_bindir}/*
 %{_datadir}/applications/xfce*
 %{_iconsdir}/hicolor/*/apps/%{name}.png
