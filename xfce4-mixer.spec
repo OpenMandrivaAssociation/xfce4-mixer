@@ -20,6 +20,7 @@ BuildRequires:	libalsa-devel
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 Obsoletes:	xfce-mixer
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 Xfce-mixer is the volume control for Xfce. It includes
