@@ -61,5 +61,5 @@ rm -rf %{buildroot}
 %{_datadir}/applications/xfce*
 %{_datadir}/xfce4/panel-plugins/
 %{_libdir}/xfce4/panel-plugins/
-%{_iconsdir}/hicolor/*
+%{_datadir}/%{name}
 %{_datadir}/pixmaps/xfce4-mixer/*.png
