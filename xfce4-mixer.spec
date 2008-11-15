@@ -5,7 +5,7 @@ Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
-Source0:	%{name}-%{version}.tar.bz2
+Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
 Patch0:		01_volume_hotkeys.patch
 Patch1:         02_mixer-block-menu.patch
 Patch2:         03_xfce4-mixer-panel-plugin_border.patch
