@@ -1,14 +1,12 @@
 Summary:	Volume control for the Xfce
 Name:		xfce4-mixer
 Version:	4.6.0
-Release:	%mkrel 2
+Release:	%mkrel 3
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
 Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
-Patch0:		01_volume_hotkeys.patch
-Patch1:         02_mixer-block-menu.patch
-Patch2:         03_xfce4-mixer-panel-plugin_border.patch
+Patch3:		xfce4-mixer-4.6.0-various-critical-fixes-from-upstream-svn-29703.patch
 BuildRequires:	xfce4-panel-devel >= %{version}
 BuildRequires:	libgstreamer-plugins-base-devel
 BuildRequires:	xfconf-devel
@@ -21,11 +19,15 @@ Obsoletes:	xfce-mixer
 BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
-Xfce-mixer is the volume control for Xfce. It includes
-a sound mixer.
+The Mixer is a volume control application for the Xfce Desktop Environment.
+It provides both a volume control plugin for the Xfce Panel and a standalone 
+mixer application.
+
+It supports all audio systems supported by the GStreamer project.
 
 %prep
 %setup -q
+%patch3 -p1
 
 %build
 %configure2_5x
