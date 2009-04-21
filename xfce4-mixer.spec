@@ -1,18 +1,17 @@
 Summary:	Volume control for the Xfce
 Name:		xfce4-mixer
-Version:	4.6.0
-Release:	%mkrel 3
+Version:	4.6.1
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
 Source0:	http://www.xfce.org/archive/xfce-%{version}/src/%{name}-%{version}.tar.bz2
-Patch3:		xfce4-mixer-4.6.0-various-critical-fixes-from-upstream-svn-29703.patch
-BuildRequires:	xfce4-panel-devel >= %{version}
+BuildRequires:	xfce4-panel-devel >= 4.6.0
 BuildRequires:	libgstreamer-plugins-base-devel
 BuildRequires:	xfconf-devel
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	libalsa-devel
-Requires:	xfce4-panel >= %{version}
+Requires:	xfce4-panel >= 4.6.0
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 Obsoletes:	xfce-mixer
@@ -27,7 +26,6 @@ It supports all audio systems supported by the GStreamer project.
 
 %prep
 %setup -q
-%patch3 -p1
 
 %build
 %configure2_5x
