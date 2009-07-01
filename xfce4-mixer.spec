@@ -1,7 +1,7 @@
 Summary:	Volume control for the Xfce
 Name:		xfce4-mixer
 Version:	4.6.1
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
@@ -14,6 +14,7 @@ BuildRequires:	perl(XML::Parser)
 BuildRequires:	libalsa-devel
 Requires:	xfce4-panel >= 4.6.0
 Suggests:	task-pulseaudio
+Suggests:	gstreamer0.10-pulse
 Requires(post):	desktop-file-utils
 Requires(postun): desktop-file-utils
 Obsoletes:	xfce-mixer
