@@ -1,7 +1,7 @@
 Summary:	Volume control for the Xfce
 Name:		xfce4-mixer
 Version:	4.6.1
-Release:	%mkrel 4
+Release:	%mkrel 5
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
