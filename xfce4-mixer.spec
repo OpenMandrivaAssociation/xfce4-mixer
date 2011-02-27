@@ -2,19 +2,18 @@
 
 Summary:	Volume control for the Xfce
 Name:		xfce4-mixer
-Version:	4.6.1
-Release:	%mkrel 7
+Version:	4.8.0
+Release:	%mkrel 1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
 Source0:	http://archive.xfce.org/src/apps/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
-Patch0:		xfce4-mixer-4.6.1-fix_volume_adjustment.patch
 BuildRequires:	xfce4-panel-devel >= 4.7.0
 BuildRequires:	libgstreamer-plugins-base-devel
 BuildRequires:	xfconf-devel
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	libalsa-devel
-BuildRequires:	libxfcegui4-devel
+BuildRequires:	libxfce4ui-devel
 Requires:	xfce4-panel >= 4.7.0
 Suggests:	task-pulseaudio
 Suggests:	gstreamer0.10-pulse
@@ -32,7 +31,6 @@ It supports all audio systems supported by the GStreamer project.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %configure2_5x
