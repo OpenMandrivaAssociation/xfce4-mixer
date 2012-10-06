@@ -2,8 +2,8 @@
 
 Summary:	Volume control for the Xfce
 Name:		xfce4-mixer
-Version:	4.8.0
-Release:	3
+Version:	4.9.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
@@ -18,7 +18,7 @@ Requires:	xfce4-panel >= 4.7.0
 Suggests:	task-pulseaudio
 Suggests:	gstreamer0.10-pulse
 Requires(post):	desktop-file-utils
-Requires(postun): desktop-file-utils
+Requires(postun):	desktop-file-utils
 Obsoletes:	xfce-mixer
 
 %description
