@@ -43,10 +43,10 @@ It supports all audio systems supported by the GStreamer project.
 %find_lang %{name} %{name}.lang
 
 %files -f %{name}.lang
-%doc TODO ChangeLog AUTHORS NEWS
+%doc ChangeLog AUTHORS NEWS
 %{_bindir}/*
 %{_datadir}/applications/xfce*
-%{_datadir}/xfce4/panel-plugins/
-%{_libdir}/xfce4/panel-plugins/
+%{_datadir}/xfce4/panel/plugins/*.desktop
+%{_libdir}/xfce4/panel/plugins/libmixer.so
 %{_datadir}/%{name}
 %{_datadir}/pixmaps/xfce4-mixer/*.png
