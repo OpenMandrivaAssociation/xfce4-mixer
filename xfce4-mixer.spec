@@ -14,6 +14,7 @@ BuildRequires:	xfconf-devel
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	libalsa-devel
 BuildRequires:	libxfce4ui-devel >= 4.9.1
+BuildRequires:	pkgconfig(unique-1.0)
 Requires:	xfce4-panel >= 4.7.0
 Suggests:	task-pulseaudio
 Suggests:	gstreamer0.10-pulse
