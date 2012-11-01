@@ -50,3 +50,4 @@ It supports all audio systems supported by the GStreamer project.
 %{_libdir}/xfce4/panel/plugins/libmixer.so
 %{_datadir}/%{name}
 %{_datadir}/pixmaps/xfce4-mixer/*.png
+%{_mandir}/man1/xfce4-mixer.1.*
