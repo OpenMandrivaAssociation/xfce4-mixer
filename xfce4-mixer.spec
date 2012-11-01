@@ -43,7 +43,7 @@ It supports all audio systems supported by the GStreamer project.
 %find_lang %{name} %{name}.lang
 
 %files -f %{name}.lang
-%doc TODO ChangeLog AUTHORS NEWS HACKING
+%doc TODO ChangeLog AUTHORS NEWS
 %{_bindir}/*
 %{_datadir}/applications/xfce*
 %{_datadir}/xfce4/panel-plugins/
