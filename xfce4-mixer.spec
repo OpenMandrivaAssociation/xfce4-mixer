@@ -1,8 +1,8 @@
-%define url_ver %(echo %{version} | cut -c 1-3)
+%define url_ver %(echo %{version} | cut -c 1-4)
 
 Summary:	Volume control for the Xfce
 Name:		xfce4-mixer
-Version:	4.9.0
+Version:	4.10.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
