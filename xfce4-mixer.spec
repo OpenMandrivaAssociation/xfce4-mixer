@@ -2,25 +2,25 @@
 
 Summary:	Volume control for the Xfce
 Name:		xfce4-mixer
-Version:	4.10.0
-Release:	2
+Version:	4.11.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		http://www.xfce.org
 Source0:	http://archive.xfce.org/src/apps/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libxfce4panel-1.0)
-BuildRequires:	pkgconfig(gstreamer-plugins-base-0.10)
+BuildRequires:	pkgconfig(gstreamer-plugins-base-1.0)
 BuildRequires:	pkgconfig(libxfconf-0)
 BuildRequires:	perl(XML::Parser)
 BuildRequires:	pkgconfig(libxfce4util-1.0)
 BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(keybinder)
-BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.9.1
+BuildRequires:	pkgconfig(libxfce4ui-1) >= 4.11
 BuildRequires:	pkgconfig(unique-1.0) >= 1.1
 Requires:	xfce4-panel >= 4.7.0
 Suggests:	task-pulseaudio
-Suggests:	gstreamer0.10-pulse
+#Suggests:	gstreamer0.10-pulse
 
 %description
 The Mixer is a volume control application for the Xfce Desktop Environment.
