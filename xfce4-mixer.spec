@@ -49,7 +49,7 @@ It supports all audio systems supported by the GStreamer project.
 %{_datadir}/applications/xfce*
 %{_datadir}/xfce4/panel/plugins/
 %{_libdir}/xfce4/panel/plugins/
-%{_datadir}/pixmaps/xfce4-mixer/*.png
+#{_datadir}/pixmaps/xfce4-mixer/*.png
 %{_datadir}/xfce4/mixer/icons/hicolor/16x16/status/audio-input-microphone-muted.png
 %{_datadir}/xfce4/mixer/icons/hicolor/scalable/status/audio-input-microphone-muted.svg
 %{_mandir}/man1/%{name}.1*
