@@ -2,12 +2,12 @@
 
 Summary:	Volume control for the Xfce
 Name:		xfce4-mixer
-Version:	4.18.1
+Version:	4.18.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		https://www.xfce.org
-Source0:	http://archive.xfce.org/src/apps/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
+Source0:	https://archive.xfce.org/src/apps/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libxfconf-0)
 BuildRequires:	perl(XML::Parser)
@@ -31,7 +31,7 @@ mixer application.
 It supports all audio systems supported by the GStreamer project.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure
