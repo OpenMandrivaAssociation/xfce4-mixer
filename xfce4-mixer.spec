@@ -8,6 +8,7 @@ License:	GPLv2+
 Group:		Graphical desktop/Xfce
 URL:		https://www.xfce.org
 Source0:	https://archive.xfce.org/src/apps/%{name}/%{url_ver}/%{name}-%{version}.tar.bz2
+BuildRequires:  meson
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(libxfconf-0)
 BuildRequires:	perl(XML::Parser)
@@ -34,12 +35,12 @@ It supports all audio systems supported by the GStreamer project.
 %autosetup -p1
 
 %build
-%configure
+%meson
 
-%make_build
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 %find_lang %{name} %{name}.lang
 
