@@ -47,7 +47,7 @@ It supports all audio systems supported by the GStreamer project.
 %find_lang %{name} %{name}.lang
 
 %files -f %{name}.lang
-%doc ChangeLog AUTHORS NEWS README
+%doc AUTHORS NEWS README
 %{_bindir}/*
 %{_datadir}/applications/xfce*
 %{_datadir}/xfce4/panel/plugins/
